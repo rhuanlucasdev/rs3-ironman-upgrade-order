@@ -390,7 +390,7 @@ export const views: View[] = [
   {
     id: "melee",
     label: "Melee",
-    guide: "The PVME melee order, with ironman sources. Farm the Ek-ZekKil with necromancy before the Havoc set. A mark here is the same mark on the Trail.",
+    guide: "The PVME melee order, with ironman sources. Farm the Ek-ZekKil with necromancy before the Havoc set. Boss order is the Melee path. A mark here is the same mark on the Trail.",
     groups: [
       {
         id: "s1",
@@ -640,6 +640,66 @@ export const views: View[] = [
           "range-corrupt",
           "melee-limitless",
         ),
+      },
+    ],
+  },
+  {
+    id: "melee-path",
+    label: "Melee path",
+    guide: "Bosses that drop melee upgrades, in the order to learn them. After the basics, Elite Dungeon 2 with melee can come before the Ek-ZekKil. Necromancy is the other way into the sword, and the sword comes before the Havoc set. A mark here is the same mark on the Trail.",
+    groups: [
+      {
+        id: "ed2",
+        title: "ED2",
+        alongside: "ezk",
+        bridge: "You can do this with melee before the Ek-ZekKil, depending on the account and your PvM skill.",
+        slots: slots(
+          gate("ed2-halberd", "ed2-antifire", "ed2-astellarn", "ed2-verak", "ed2-bsd"),
+          loot("ed2-flurry", "ed2-fury", "ed2-barge"),
+        ),
+      },
+      {
+        id: "ezk",
+        title: "Ek-ZekKil",
+        bridge: "Or farm the sword first with necromancy. Either order is fine. Do this before the Havoc set.",
+        slots: slots(gate("zuk-kiln", "zuk-hm", "zuk-ezk"), side("zuk-hm-cape")),
+      },
+      {
+        id: "zuk",
+        title: "Zuk",
+        bridge: "With the greater abilities, clear normal mode for the melee cape. The book and the other capes can wait.",
+        slots: slots(gate("zuk-nm", "zuk-kal-ket"), side("zuk-ful", "zuk-four")),
+      },
+      {
+        id: "glacor",
+        title: "Arch-Glacor",
+        bridge: "After the normal Zuk cape, learn Arch-Glacor and make the tier 85 ice weapons.",
+        slots: slots(
+          gate(
+            "ag-mech-creeping",
+            "ag-mech-flurry",
+            "ag-mech-glacytes",
+            "ag-mech-pillars",
+            "ag-mech-cannon",
+            "ag-mech-core",
+            "ag-nm5",
+            "ag-nilas",
+            "ag-t85",
+          ),
+          loot("ag-artefact", "ag-wen"),
+        ),
+      },
+      {
+        id: "zam",
+        title: "Zamorak",
+        bridge: "After the ice weapons, Zamorak is the next boss.",
+        slots: slots(gate("zam-first"), loot("zam-boots", "zam-hood", "zam-bottom", "zam-top", "zam-roar")),
+      },
+      {
+        id: "leng",
+        title: "Leng",
+        bridge: "With the Ek-ZekKil, streak hard mode. Smith each Leng weapon when its core drops.",
+        slots: gate("ag-hm-streak", "ag-core-1", "ag-leng-mh", "ag-core-2", "ag-leng-oh"),
       },
     ],
   },
